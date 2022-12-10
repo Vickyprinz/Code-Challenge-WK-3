@@ -1,6 +1,7 @@
 
 body {
     background-color: #ebebeb;
+    
   }
   
   .heading {
@@ -22,11 +23,11 @@ body {
   }
   
   .content {
-    color: #3e8fde;
+    color: #2825f7;
   }
   
   #subtitle {
-    color: white;
+    color: rgb(0, 0, 0);
     margin-left: 55px;
   }
   
@@ -54,3 +55,4 @@ body {
   #film-info {
     padding-bottom: 15px;
   }
+  
