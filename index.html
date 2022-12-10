@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flatiron Movie Theater</title>
+    <link rel="stylesheet" href="./css/style.css" />
+   
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="heading">
+      <div class="item">
+        <h1 class="ui header">
+          <i class="orange ticket icon"></i>
+          <div class="content">Flatiron Movie Theater</div>
+          <div class="sub header" id="subtitle">Now Showing </div>
+        </h1>
+      </div>
+    </div>
+
+    <div class="ui centered grid">
+      <div class="four wide column">
+        <div class="list-container">
+          <!-- side menu -->
+          <ul class="ui divided list" id="films">
+            <li class="film item">Movie titles.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- poster -->
+      <div class="four wide column">
+        <img
+          id="poster"
+          src="./image/image.jpeg"
+          alt="[MOVIE TITLE]"
+        />
+      </div>
+
+      <!-- showing info -->
+      <div class="four wide column">
+        <div class="ui cards" id="showing">
+          <div class="card">
+            <div id="title" class="title">[MOVIE TITLE]</div>
+            <div id="runtime" class="meta">[RUNTIME] minutes</div>
+            <div class="content">
+              <div class="description">
+                <div id="film-info">[INSERT MOVIE DESCRIPTION HERE]</div>
+                <span id="showtime" class="ui label">[SHOWTIME]</span>
+                <span id="ticket-num">[X]</span> remaining tickets
+              </div>
+            </div>
+            <div class="extra content">
+              <button id="buy-ticket" class="ui orange button">
+                Buy Ticket
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
