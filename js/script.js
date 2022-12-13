@@ -12,9 +12,6 @@ let allFilmsList = [];
       const res = await fetch(url);
       json = await res.json();
 
-      if (res.status >= 400) {
-        throw new Error('request did not succeed: ' + res.status);
-      }
       allFilmsList = json;
 
       await renderMovies();
