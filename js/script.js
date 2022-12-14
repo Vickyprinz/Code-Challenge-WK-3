@@ -15,7 +15,7 @@ let allFilmsList = [];
       allFilmsList = json;
 
       await renderMovies();
-      await updateMovie(allFilmsList[0]);
+      await updateMovie(allFilmsList.films[0]);
     } catch (e) {
       console.error('Bad request');
     }
@@ -49,7 +49,7 @@ let allFilmsList = [];
   async function renderMovies() {
     let movieClicked,
       notClicked = [];
-    const html = allFilmsList.map(({ title, id }) => template(title, id));
+    const html = allFilmsList.films.map(({ title, id }) => template(title, id));
 
     films.innerHTML = html.join('\n');
 
@@ -79,9 +79,9 @@ let allFilmsList = [];
       node.style.cursor = 'pointer';
 
       node.addEventListener('click', (e) => {
-        movieClicked = allFilmsList.filter((ele) => ele.id === node.id);
+        movieClicked = allFilmsList.films.filter((ele) => ele.id === node.id);
         updateMovie(movieClicked[0]);
-        notClicked = allFilmsList.filter((ele) => ele.id !== node.id);
+        notClicked = allFilmsList.films.filter((ele) => ele.id !== node.id);
         document.getElementById(`${movieClicked[0].id}`).style.opacity = 0.5;
         notClicked.forEach((item) => {
           document.getElementById(`${item.id}`).style.opacity = 1;
