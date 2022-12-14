@@ -4,7 +4,7 @@ let allFilmsList = [];
   const films = document.getElementById('films');
   const buyTicket = document.getElementById('buy-ticket');
 
-  const url = 'http://localhost:3000/films';
+  const url = 'https://vickyprinz.github.io/db/db.json';
 
   async function getNewItems() {
     let json;
